@@ -165,3 +165,10 @@ if(selectColor)    {
 if(SaveColor)    {
     SaveColor.addEventListener("click", handleSaveColor);
 }
+if(canvasClear) {
+    canvasClear.addEventListener("click", handleCanvasClear);
+}
+
+if(sizeForm)    {
+    sizeForm.addEventListener("submit", handleCanvasSize);
+}
