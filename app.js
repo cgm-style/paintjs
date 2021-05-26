@@ -9,7 +9,9 @@ const canvas = document.querySelector("#jsCanvas"),
       CANVAS_SIZE = 700,
       saveBtn = document.querySelector("#jsSave"),
       selectColor = document.querySelector("#jsColorSelect"),
-      SaveColor = document.querySelector("#jsSaveColor");
+      SaveColor = document.querySelector("#jsSaveColor"),
+      canvasClear = document.querySelector("#jsClear"),
+      sizeForm = document.querySelector("#jsSize");
 
       console.dir(selectColor);
 
@@ -114,7 +116,23 @@ function handleSaveColor()  {
     }
 }
 
+function handleCanvasClear()    {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+}
 
+function handleCanvasSize(event) {
+    const changeCanvasSizeWidth = sizeForm[0].value,
+          changeCanvasSizeHeight = sizeForm[1].value;
+
+    event.preventDefault();
+    console.log(sizeForm[0].value,sizeForm[1].value);
+    
+
+    canvas.style.width = `${changeCanvasSizeWidth}px`;
+    canvas.style.height = `${changeCanvasSizeHeight}px`;
+    canvas.width = changeCanvasSizeWidth;
+    canvas.height = changeCanvasSizeHeight;
+}
 
 if(canvas)  {
     canvas.addEventListener("mousemove", onMouseMove);
