@@ -24,7 +24,7 @@ body {
 }
 
 .controls .controls_btns    {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .controls_btns button,#jsSaveColor   {
@@ -93,4 +93,16 @@ body {
 .change_color {
     margin: 5px;
     margin-left: -10px;
+}
+
+#jsSize {
+    margin-bottom: 20px;
+}
+#jsSubmit   {
+    display:none;
+}
+#jsSize input   {
+    border: none;
+    background: no-repeat;
+    border-bottom: 1px solid;
 }
