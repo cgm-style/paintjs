@@ -132,6 +132,9 @@ function handleCanvasSize(event) {
     canvas.style.height = `${changeCanvasSizeHeight}px`;
     canvas.width = changeCanvasSizeWidth;
     canvas.height = changeCanvasSizeHeight;
+      
+    sizeForm[0].value = "";
+    sizeForm[1].value = "";
 }
 
 if(canvas)  {
